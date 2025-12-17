@@ -103,3 +103,153 @@
     display: none;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0b1220, #05080f);
+  color: #fff;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 42px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #aaa;
+  margin: 15px 0 60px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 50px;
+}
+
+/* Contact Info */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  margin-bottom: 30px;
+}
+
+.info-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.info-box span {
+  font-size: 22px;
+}
+
+.info-box h4 {
+  margin-bottom: 5px;
+}
+
+.info-box p {
+  color: #ccc;
+}
+
+.follow {
+  margin-top: 30px;
+}
+.socials {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.socials a {
+  color: #fff;
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  color: #00bcd4; /* robotics vibe */
+  transform: scale(1.2);
+}
+
+
+
+/* Form */
+.contact-form {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  padding: 35px;
+  border-radius: 14px;
+}
+
+.contact-form h2 {
+  margin-bottom: 25px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 13px;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  color: #fff;
+}
+
+textarea {
+  resize: none;
+  height: 130px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  padding: 70px 80px;
+  background: #05080f;
+  margin-top: 100px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #777;
+}
