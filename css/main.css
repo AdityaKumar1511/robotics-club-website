@@ -252,3 +252,147 @@ footer p {
   text-decoration: none;
   color: #aaa;
 }
+
+
+/* here */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #050a1a;
+  color: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 80px 8%;
+  background: radial-gradient(circle at top left, #0d1b3d, #050a1a 70%);
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT SIDE */
+.hero-text {
+  max-width: 600px;
+}
+
+.tagline {
+  display: inline-block;
+  background: rgba(0, 102, 255, 0.15);
+  color: #4da3ff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #4da3ff;
+}
+
+.hero-text p {
+  font-size: 17px;
+  color: #cbd5f5;
+  margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: #0b1a3a;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #112a63;
+}
+
+.btn.secondary {
+  border: 1px solid #2e3b6f;
+  color: #cbd5f5;
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-box h3 {
+  font-size: 28px;
+  color: #fff;
+}
+
+.stat-box p {
+  font-size: 14px;
+  color: #9aa6d1;
+}
+
+/* RIGHT IMAGE */
+.hero-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 520px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* Decorative gradient border */
+.hero-image-border {
+  background: linear-gradient(135deg, #4da3ff, #7c3aed);
+  padding: 4px;
+  border-radius: 22px;
+  max-width: 520px;
+}
+
+.hero-image {
+  background: #050a1a;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+.hero-image-border {
+  box-shadow: 0 0 30px rgba(77, 163, 255, 0.25);
+}
