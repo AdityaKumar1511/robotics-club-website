@@ -1,0 +1,19 @@
+h1{
+    background-color: aqua;
+    height: 40px;
+    width: 300px;
+    border: 3px,darkblue,dashed;
+    padding: 6px;
+    margin: 4px;
+    text-align: center;
+}
+h2{
+    background-color: palevioletred;
+    border: 2px,black,dashed;
+    padding: 6px;
+}
+p{
+    background-color: rgba(218, 15, 150, 0.571);
+    border: 3px,blue,dotted;
+    padding: 5px;
+}
