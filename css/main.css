@@ -642,3 +642,99 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Google Font for that clean tech look */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    background-color: #05070a; /* Darker navy/black background */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.team-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    font-weight: 700;
+    color: #3b82f6; /* Robotics Club Blue color */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Updated Member Card with Blue Glow */
+.member-card {
+    background: rgba(11, 14, 20, 0.8); /* Glassmorphism effect */
+    padding: 40px 20px;
+    border-radius: 20px;
+    border: 1px solid #1e293b;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.member-card:hover {
+    transform: translateY(-15px);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2); /* Soft Blue Glow */
+}
+
+.member-name {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.member-role {
+    font-size: 0.9rem;
+    color: #60a5fa; /* Light Blue for roles */
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Image styling with Neon Blue Circle */
+.image-container {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #3b82f6; /* Blue border instead of white */
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); /* Neon Glow on image */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Extra: Blue accent line at the bottom of card */
+.member-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.member-card:hover::after {
+    width: 100%;
+}
