@@ -104,7 +104,7 @@
   }
 }
 
-body {
+#bodycontact{
   background: linear-gradient(180deg, #0b1220, #05080f);
   color: #fff;
 }
@@ -256,7 +256,7 @@ footer p {
 
 /* here */
 
-body {
+#bodyhome {
   background: #050a1a;
   color: #fff;
 }
@@ -392,7 +392,7 @@ body {
 }
 /* here */
 
-body {
+#bodyproject {
   background: radial-gradient(circle at top, #0b1220, #050914);
   color: #fff;
 }
@@ -508,7 +508,7 @@ body {
 }
 /* here */
 
-body {
+#bodyabout {
   background-color: #0b1220;
   color: #ffffff;
 }
@@ -630,7 +630,7 @@ body {
 /* Google Font for that clean tech look */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-body {
+#bodyteam {
     background-color: #05070a; /* Darker navy/black background */
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -724,7 +724,7 @@ body {
 }
 /* here */
 
-body {
+#bodyevent {
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: #e5e7eb;
 }
