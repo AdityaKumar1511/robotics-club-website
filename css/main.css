@@ -738,3 +738,145 @@ body {
 .member-card:hover::after {
     width: 100%;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+/* Events Hero Heading */
+.events-hero {
+  text-align: center;
+  padding: 80px 10% 50px;
+  background: linear-gradient(to bottom, rgba(2,6,23,0.9), rgba(2,6,23,1));
+}
+
+.events-hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 15px;
+}
+
+.events-hero p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cbd5f5;
+}
+
+/* Section */
+.events-section {
+  padding: 60px 8%;
+}
+
+/* Titles */
+.section-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #f8fafc;
+}
+
+/* Grid */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 60px;
+}
+
+/* Card */
+.event-card {
+  background: linear-gradient(145deg, #0b1220, #111827);
+  border-radius: 14px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Upcoming info */
+.event-info p {
+  margin-bottom: 8px;
+  color: #cbd5f5;
+}
+
+/* Buttons */
+.btn {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background: #1f2933;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #2563eb;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* Tags */
+.tag {
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.competition {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.workshop {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+/* Status */
+.status {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 12px;
+  background: #1f2937;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Past Event Content */
+.event-card h3 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.event-footer p {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #cbd5f5;
+}
