@@ -255,12 +255,6 @@ footer p {
 
 
 /* here */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
 
 body {
   background: #050a1a;
@@ -396,12 +390,7 @@ body {
 .hero-image-border {
   box-shadow: 0 0 30px rgba(77, 163, 255, 0.25);
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
+/* here */
 
 body {
   background: radial-gradient(circle at top, #0b1220, #050914);
@@ -517,12 +506,7 @@ body {
   transform: translateY(-6px);
   transition: 0.3s ease;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+/* here */
 
 body {
   background-color: #0b1220;
@@ -738,12 +722,7 @@ body {
 .member-card:hover::after {
     width: 100%;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
+/* here */
 
 body {
   background: radial-gradient(circle at top, #0f172a, #020617);
@@ -880,7 +859,7 @@ body {
   margin-bottom: 6px;
   color: #cbd5f5;
 }
-body {
+#newsbody{
   margin: 0;
   padding: 20px;
   background: rgba(7, 15, 30, 0.85);
