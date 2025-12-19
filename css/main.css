@@ -644,12 +644,12 @@ footer p {
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 50px !important;
     margin-bottom: 60px;
     font-weight: 700;
     color: #3b82f6; /* Robotics Club Blue color */
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 2px; */
 }
 
 .team-grid {
