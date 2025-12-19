@@ -448,7 +448,7 @@ footer p {
   font-weight: 600;
 }
 
-.completed {
+.projects-section .completed {
   background: #22c55e;
   color: #052e16;
 }
@@ -493,12 +493,12 @@ footer p {
   font-weight: 500;
 }
 /* Status Variants */
-.in-progress {
+.projects-section .in-progress {
   background: #3b82f6;
   color: #e0f2fe;
 }
 
-.planning {
+.projects-section .planning {
   background: #facc15;
   color: #422006;
 }
