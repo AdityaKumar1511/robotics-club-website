@@ -635,7 +635,6 @@ footer p {
     color: white;
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 50px 20px;
 }
 
 .team-section {
@@ -861,7 +860,7 @@ footer p {
 }
 #newsbody{
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   background: rgba(7, 15, 30, 0.85);
   color: #ffffff;
   font-family: Arial, sans-serif;
@@ -870,6 +869,7 @@ footer p {
 .top-header h1 {
   font-size: 42px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .news-grid {
