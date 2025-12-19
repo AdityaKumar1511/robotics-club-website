@@ -119,10 +119,11 @@
   font-size: 42px;
 }
 
-.subtitle {
+.subtitlecont {
   text-align: center;
   color: #aaa;
-  margin: 15px 0 60px;
+  /* margin: 15px 0 60px; */
+  margin-bottom: 50px;
 }
 
 .contact-container {
@@ -292,7 +293,7 @@ footer p {
 .hero-text h1 {
   font-size: 56px;
   line-height: 1.2;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .hero-text h1 span {
@@ -302,7 +303,7 @@ footer p {
 .hero-text p {
   font-size: 17px;
   color: #cbd5f5;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 /* BUTTONS */
