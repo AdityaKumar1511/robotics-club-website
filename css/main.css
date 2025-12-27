@@ -394,6 +394,9 @@ footer {
 
 /* Upcoming Card Design */
 .event-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 20px;
