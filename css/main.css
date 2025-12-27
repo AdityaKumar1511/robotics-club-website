@@ -929,3 +929,10 @@ footer p {
   color: #e5e7eb;
   min-height: 100vh;
 }
+.news-card{
+  border: 2px solid transparent;
+
+}
+.news-card:hover{
+  border: 2px solid white
+}
