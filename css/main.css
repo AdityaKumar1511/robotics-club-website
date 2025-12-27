@@ -924,3 +924,8 @@ footer p {
   text-decoration: none;
   color: #00ffaa;
 }
+#bodyachieve{
+    background: radial-gradient(circle at top left, #0a1a3c, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+}
