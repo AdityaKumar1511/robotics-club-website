@@ -3,84 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robotics_Club_NITP</title>
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body id="bodyhome">
-    <!--Navbar-->
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="nav-left">
-          <div class="logo"><img src="images/background/logo.png" class="logo"></div>
-          <div class="club-text">
-            <span class="club-name">Robotics Club</span>
-            <span class="club-sub">NIT Patna</span>
-          </div>
-        </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>  
-          <a href="achievements.html">Achievements</a>
-          <a href="projects.html">Projects</a>
-          <a href="news.html">News</a>
-          <a href="team.html">Team</a>
-          <a href="events.html">Events</a>
-          <a href="about.html">About</a>
-        </nav>
-        <a href="contact.html" class="join-btn">Join Us</a>
+    <title>Home | Robotics Club NITP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css"> </head>
+<body>
+    <nav>
+        <div class="logo">ROBOTICS<span style="color:white">NITP</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Building The <span class="gradient-text">Future Bots</span></h1>
+            <p>Innovating the boundaries of Engineering at National Institute of Technology, Patna.</p>
+            <div class="hero-btns">
+                <a href="projects.html" class="btn-primary">View Projects</a>
+                <a href="about.html" class="btn-secondary">Learn More</a>
+            </div>
         </div>
     </header>
-    <main>
-    <section class="hero">
-        <div class="hero-container">
 
-            <!-- LEFT CONTENT -->
-            <div class="hero-text">
-                <span class="tagline">Building the Future, One Bot at a Time</span>
-
-                <h1>
-                    Robotics Club<br />
-                    <span>NIT Patna</span>
-                </h1>
-
-                <p>
-                    Join us in exploring the exciting world of robotics, automation,
-                    and artificial intelligence. Learn, build, and compete with
-                    passionate innovators.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="contact.html" class="btn primary">Join Our Club →</a>
-                    <a href="projects.html" class="btn secondary">View Projects</a>
-                </div>
-
-                <!-- STATS -->
-                <div class="stats">
-                    <div class="stat-box">
-                        <h3>150+</h3>
-                        <p>Members</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3>50+</h3>
-                        <p>Projects</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3>25+</h3>
-                        <p>Awards</p>
-                    </div>
-                </div>
+    <section class="highlights container">
+        <h2 class="section-title">Club Highlights</h2>
+        <div class="grid">
+            <div class="realistic-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Advanced R&D</h3>
+                <p>Working on Swarm Robotics and AI integration in hardware.</p>
             </div>
-
-            <!-- RIGHT IMAGE -->
-            <div class="hero-image-border">
-                <div class="hero-image">
-                    <img src="images/events/r18.jpg" alt="Robotics Blueprint" />
-                </div>
+            <div class="realistic-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Global Competitions</h3>
+                <p>Consistent participation in NASA Lunabotics & Robocon.</p>
             </div>
-
-
+            <div class="realistic-card">
+                <i class="fas fa-users"></i>
+                <h3>Tech Community</h3>
+                <p>A network of 500+ passionate engineers and innovators.</p>
+            </div>
         </div>
     </section>
-    </main>
-    <script src="js/main.js"></script>
+
+    <footer>
+        <p>&copy; 2025 Robotics Club NIT Patna</p>
+        <div class="footer-socials">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>

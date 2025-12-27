@@ -3,84 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>Achievements | Robotics Club NITP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+   
 </head>
-<body id="bodyachieve">
-        <!--Navbar-->
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="nav-left">
-          <div class="logo"><img src="images/background/logo.png" class="logo"></div>
-          <div class="club-text">
-            <span class="club-name">Robotics Club</span>
-            <span class="club-sub">NIT Patna</span>
-          </div>
-        </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>  
-          <a href="achievements.html">Achievements</a>
-          <a href="projects.html">Projects</a>
-          <a href="news.html">News</a>
-          <a href="team.html">Team</a>
-          <a href="events.html">Events</a>
-          <a href="about.html">About</a>
-        </nav>
-        <a href="contact.html" class="join-btn">Join Us</a>
+<body>
+    <nav>
+        <div class="logo">ROBOTICS<span style="color:white">NITP</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="achievements.html" class="active">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="orbitron-text">Our Milestones</h1>
+            <p>Celebrating excellence in engineering and innovation.</p>
         </div>
     </header>
-      <!-- Page Header -->
-  <section class="page-header">
-    <h1>Our Achievements</h1>
-    <p>Milestones that define our journey in innovation and excellence</p>
-  </section>
 
-  <!-- Achievements Grid -->
-  <section class="achievements-container">
+    <section class="stats-bar">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h2 class="counter" data-target="15">0</h2>
+                <p>Major Awards</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="50">0</h2>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="10">0</h2>
+                <p>Research Papers</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="500">0</h2>
+                <p>Community Members</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="achievement-card">
-      <span class="badge">🏆 National</span>
-      <h3>Smart India Hackathon</h3>
-      <p>Secured top position among 500+ teams for an AI-based automation solution.</p>
-      <span class="year">2024</span>
-    </div>
+    <section class="container">
+        <h2 class="section-title">Wall of Fame</h2>
+        <div class="grid">
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-trophy"></i></div>
+                <div class="award-content">
+                    <span class="year">2024</span>
+                    <h3>NASA Lunabotics Phase 1</h3>
+                    <p>Ranked among the top 50 global teams for the Lunar Regolith Excavation design challenge.</p>
+                </div>
+            </div>
 
-    <div class="achievement-card">
-      <span class="badge">🤖 Robotics</span>
-      <h3>e-Yantra Robotics Competition</h3>
-      <p>Qualified to the final round organized by IIT Bombay.</p>
-      <span class="year">2023</span>
-    </div>
+            <div class="award-card special">
+                <div class="award-icon"><i class="fas fa-medal"></i></div>
+                <div class="award-content">
+                    <span class="year">2023</span>
+                    <h3>E-Yantra Robotics Comp</h3>
+                    <p>Secured 2nd Runner-up position at IIT Bombay in the Swarm Robotics Theme.</p>
+                </div>
+            </div>
 
-    <div class="achievement-card">
-      <span class="badge">🥇 Winner</span>
-      <h3>Inter-NIT Tech Fest</h3>
-      <p>Won first prize in autonomous robot challenge.</p>
-      <span class="year">2023</span>
-    </div>
+            <div class="award-card">
+                <div class="award-icon"><i class="fas fa-award"></i></div>
+                <div class="award-content">
+                    <span class="year">2022</span>
+                    <h3>SIH Winner</h3>
+                    <p>Winners of Smart India Hackathon for the 'Autonomous Disaster Management Bot'.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="achievement-card">
-      <span class="badge">🚀 Innovation</span>
-      <h3>Google Developer Hackathon</h3>
-      <p>Built a campus-focused smart monitoring system using Google Cloud.</p>
-      <span class="year">2024</span>
-    </div>
+    <footer>
+        <p>&copy; 2025 Robotics Club NIT Patna</p>
+    </footer>
 
-    <div class="achievement-card">
-      <span class="badge">🌐 Open Source</span>
-      <h3>Open-Source Contributions</h3>
-      <p>Contributed to ROS and IoT-based community projects.</p>
-      <span class="year">Ongoing</span>
-    </div>
-
-    <div class="achievement-card">
-      <span class="badge">🎓 Mentorship</span>
-      <h3>Workshops & Bootcamps</h3>
-      <p>Conducted 15+ workshops on robotics, AI & embedded systems.</p>
-      <span class="year">2022–24</span>
-    </div>
-
-  </section>
+    <script src="/js/main.js"></script>
+    
 </body>
 </html>

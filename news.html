@@ -3,125 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/main.css">
+    <title>News & Updates | Robotics Club NITP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+   
 </head>
-<body id="newsbody">
-        <!--Navbar-->
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="nav-left">
-          <div class="logo"><img src="images/background/logo.png" class="logo"></div>
-          <div class="club-text">
-            <span class="club-name">Robotics Club</span>
-            <span class="club-sub">NIT Patna</span>
-          </div>
-        </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>  
-          <a href="achievements.html">Achievements</a>
-          <a href="projects.html">Projects</a>
-          <a href="news.html">News</a>
-          <a href="team.html">Team</a>
-          <a href="events.html">Events</a>
-          <a href="about.html">About</a>
-        </nav>
-        <a href="contact.html" class="join-btn">Join Us</a>
+<body>
+    <nav>
+        <div class="logo">ROBOTICS<span style="color:white">NITP</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html" class="active">News</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="orbitron-text">Robotics Pulse</h1>
+            <p>Latest updates from our lab and the global robotics industry.</p>
         </div>
     </header>
-    <header class="top-header">
-  <h1>Blogs</h1>
-</header>
 
-<section class="news-grid">
+    <div class="container news-layout">
+        <aside class="news-sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Search news...">
+            </div>
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <button class="filter-link active">All News</button>
+                <button class="filter-link">Club Updates</button>
+                <button class="filter-link">Tech Innovations</button>
+                <button class="filter-link">Competitions</button>
+            </div>
+            
+            <div class="newsletter-box">
+                <h4>Join the Squad</h4>
+                <p>Get the latest bot-updates in your inbox.</p>
+                <form onsubmit="return false;">
+                    <input type="email" placeholder="Email Address">
+                    <button class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </aside>
 
-<div class="news-card">
-  <img src="images/iot.jpg">
-  <span class="badge">Robotica</span>
-  <h3>Internet of Things</h3>
-  <p>IoT connects devices to the internet, enabling data exchange and smart automation.</p>
-  <div class="meta">
-    <span>2022-12-20</span>
-    <a href="#">Share</a>
-  </div>
-</div>
+        <main class="news-feed">
+            <h2 class="section-title">Club News</h2>
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="date">Dec 20, 2025</span>
+                    <span class="tag">Internal</span>
+                </div>
+                <h3>NITP Team Qualifies for NASA Lunabotics Finals</h3>
+                <p>After months of rigorous testing, our team "Lunar Explorers" has successfully passed the Phase 2 documentation and is now heading to the final prototype testing stage...</p>
+                <a href="#" class="read-more">Read Full Story <i class="fas fa-arrow-right"></i></a>
+            </article>
 
-<div class="news-card">
-  <img src="images/blockchain.jpg">
-  <span class="badge">Robotica</span>
-  <h3>Intro to Blockchain</h3>
-  <p>Blockchain provides decentralized and secure digital transactions.</p>
-  <div class="meta">
-    <span>2021-02-09</span>
-    <a href="#">Share</a>
-  </div>
-</div>
+            <h2 class="section-title">Industry Insights</h2>
+            <article class="news-card industry">
+                <div class="news-meta">
+                    <span class="date">Dec 18, 2025</span>
+                    <span class="tag">Tech</span>
+                </div>
+                <h3>Boston Dynamics Reveals New Atlas Capabilities</h3>
+                <p>The latest iteration of the Atlas robot showcases unparalleled balance and parkour skills, pushing the boundaries of humanoid robotics further than ever before...</p>
+                <a href="https://www.bostondynamics.com" target="_blank" class="read-more">Source: Boston Dynamics <i class="fas fa-external-link-alt"></i></a>
+            </article>
 
-<div class="news-card">
-  <img src="images/rpa.jpg">
-  <span class="badge">Robotica</span>
-  <h3>Robotic Process Automation</h3>
-  <p>RPA automates repetitive tasks and improves business efficiency.</p>
-  <div class="meta">
-    <span>2022-12-21</span>
-    <a href="#">Share</a>
-  </div>
-</div>
+            <article class="news-card">
+                <div class="news-meta">
+                    <span class="date">Dec 15, 2025</span>
+                    <span class="tag">Workshop</span>
+                </div>
+                <h3>Meeting Summary: Winter Tech-Sprint</h3>
+                <p>The club held its annual winter meeting to discuss the roadmap for 2026. Key focus areas include Swarm Robotics and Industrial IoT applications...</p>
+                <a href="#" class="read-more">View Summary</a>
+            </article>
+        </main>
+    </div>
 
-<div class="news-card">
-  <img src="images/printing.jpg">
-  <span class="badge">Robotica</span>
-  <h3>3D Printing</h3>
-  <p>3D printing builds objects layer by layer using digital designs.</p>
-  <div class="meta">
-    <span>2020-12-01</span>
-    <a href="#">Share</a>
-  </div>
-</div>
+    <footer>
+        <p>&copy; 2025 Robotics Club NIT Patna</p>
+    </footer>
 
-<div class="news-card">
-  <img src="images/robotics.jpg">
-  <span class="badge">Robotica</span>
-  <h3>Robotics Technology</h3>
-  <p>Robotics combines engineering and AI to create intelligent machines.</p>
-  <div class="meta">
-    <span>2023-08-16</span>
-    <a href="#">Share</a>
-  </div>
-</div>
-
-<div class="news-card">
-  <img src="images/future.jpg">
-  <span class="badge">Robotica</span>
-  <h3>Technology of the Future</h3>
-  <p>Future technology will redefine automation, AI, and human interaction.</p>
-  <div class="meta">
-    <span>2022-12-20</span>
-    <a href="#">Share</a>
-  </div>
-</div>
-<div class="news-card">
-  <img src="images/privacy.jpg">
-  <span class="badge">Robotica</span>
-  <h3>Data Privacy and Data Breach</h3>
-  <p>“Privacy is one of the biggest problems in this new electronic age" -Andy Grove</p>
-  <div class="meta">
-    <span>2024-08-16</span>
-    <a href="#">Share</a>
-  </div>
-</div>
-<div class="news-card">
-  <img src="images/5g.jpg">
-  <span class="badge">Robotica</span>
-  <h3>5G Technology</h3>
-  <p>“The 5G World will be a collaborative ecosystem, and the role of what each of us will do in that remains to be thought through.” Borje Ekholm.</p>
-  <div class="meta">
-    <span>2021-09-01</span>
-    <a href="#">Share</a>
-  </div>
-</div>
-
-</section>
-
+    <script src="/js/main.js"></script>
 </body>
 </html>

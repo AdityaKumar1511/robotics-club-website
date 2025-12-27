@@ -1,253 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robotics Club | Projects</title>
-  <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Robotics Club NITP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    
 </head>
-<body id="bodyproject">
-      <!--Navbar-->
-    <header class="navbar">
-      <div class="nav-container">
-        <div class="nav-left">
-          <div class="logo"><img src="images/background/logo.png" class="logo"></div>
-          <div class="club-text">
-            <span class="club-name">Robotics Club</span>
-            <span class="club-sub">NIT Patna</span>
-          </div>
-        </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>  
-          <a href="achievements.html">Achievements</a>
-          <a href="projects.html">Projects</a>
-          <a href="news.html">News</a>
-          <a href="team.html">Team</a>
-          <a href="events.html">Events</a>
-          <a href="about.html">About</a>
-        </nav>
-        <a href="contact.html" class="join-btn">Join Us</a>
+<body>
+    <nav>
+        <div class="logo">ROBOTICS<span style="color:white">NITP</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="orbitron-text">Innovation Gallery</h1>
+            <p>Showcasing our journey through hardware and intelligence.</p>
         </div>
     </header>
-  <section class="projects-section">
-    <h1>Our Projects</h1>
-    <p class="subtitle">
-      Explore our innovative projects spanning various domains of robotics,
-      from autonomous systems to human-robot interaction.
-    </p>
 
-    <div class="projects-grid">
-      <div class="project-card">
-  <img src="images\projects\3d printing.png" alt="3D Printing">
-  <span class="status completed">Completed</span>
+    <section class="projects-section container">
+        <div class="filter-container">
+            <div class="filter-group">
+                <span>Category:</span>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="drone">Drones</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="iot">IoT</button>
+                <button class="filter-btn" data-filter="arm">Robotic Arm</button>
+            </div>
+        </div>
 
-  <div class="content">
-    <h3>3D Printing</h3>
-    <p>
-      Design and fabrication of mechanical components using FDM 3D printing,
-      focusing on rapid prototyping and functional parts.
-    </p>
+        <div class="grid" id="projectGrid">
+            <div class="project-card" data-category="drone" data-year="2024">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=600" alt="Drone Project">
+                    <div class="card-overlay">
+                        <button class="view-details" onclick="openModal('project1')">View Details</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="project-year">2024</span>
+                    <h3>Autonomous Hexacopter</h3>
+                    <p>An advanced drone designed for surveillance and GPS-based autonomous navigation using ROS.</p>
+                    <div class="tech-stack">
+                        <span>ROS</span> <span>Arduino</span> <span>Python</span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="tags">
-      <span>CAD</span>
-      <span>Prototyping</span>
-      <span>Manufacturing</span>
+            <div class="project-card" data-category="ai" data-year="2023">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&q=80&w=600" alt="AI Project">
+                    <div class="card-overlay">
+                        <button class="view-details" onclick="openModal('project2')">View Details</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="project-year">2023</span>
+                    <h3>Gesture Controlled Bot</h3>
+                    <p>Computer vision-based bot that follows hand gestures using MediaPipe and OpenCV.</p>
+                    <div class="tech-stack">
+                        <span>OpenCV</span> <span>Raspberry Pi</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
     </div>
 
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\automated bot.png" alt="Automated Bot">
-  <span class="status in-progress">In Progress</span>
+    <footer>
+        <p>&copy; 2025 Robotics Club NIT Patna</p>
+        <div class="footer-socials">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+    </footer>
 
-  <div class="content">
-    <h3>Automated Bot</h3>
-    <p>
-      An autonomous robot designed to perform repetitive tasks using sensor
-      feedback and microcontroller-based control.
-    </p>
-
-    <div class="tags">
-      <span>Automation</span>
-      <span>Sensors</span>
-      <span>Embedded</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\drone.png" alt="Drone">
-  <span class="status planning">Planning</span>
-
-  <div class="content">
-    <h3>Drone</h3>
-    <p>
-      A quadcopter platform with GPS navigation, obstacle avoidance,
-      and aerial data collection capabilities.
-    </p>
-
-    <div class="tags">
-      <span>UAV</span>
-      <span>GPS</span>
-      <span>Flight Control</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\hexapod.png" alt="Hexapod">
-  <span class="status in-progress">In Progress</span>
-
-  <div class="content">
-    <h3>Hexapod Robot</h3>
-    <p>
-      A six-legged walking robot implementing gait algorithms for stable
-      locomotion over uneven terrain.
-    </p>
-
-    <div class="tags">
-      <span>Legged Robotics</span>
-      <span>Gait Control</span>
-      <span>Arduino</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\line follower bot.png" alt="Line Follower Bot">
-  <span class="status completed">Completed</span>
-
-  <div class="content">
-    <h3>Line Follower Bot</h3>
-    <p>
-      A high-speed line follower robot using IR sensors and PID control
-      for competitive robotics challenges.
-    </p>
-
-    <div class="tags">
-      <span>PID</span>
-      <span>Sensors</span>
-      <span>Control Systems</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\mark 1.6.png" alt="Mark 1.6">
-  <span class="status completed">Completed</span>
-
-  <div class="content">
-    <h3>Mark 1.6</h3>
-    <p>
-      Iterative development version of a modular robotic platform with
-      improved electronics, control, and mechanical stability.
-    </p>
-
-    <div class="tags">
-      <span>Embedded</span>
-      <span>Iteration</span>
-      <span>Hardware</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\plutox.png" alt="Plutox">
-  <span class="status planning">Planning</span>
-
-  <div class="content">
-    <h3>Plutox</h3>
-    <p>
-      A next-generation experimental robotics platform aimed at
-      advanced autonomy and AI-driven decision making.
-    </p>
-
-    <div class="tags">
-      <span>AI</span>
-      <span>Autonomy</span>
-      <span>Research</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\radar navigation.png" alt="Radar Navigation">
-  <span class="status in-progress">In Progress</span>
-
-  <div class="content">
-    <h3>Radar Navigation</h3>
-    <p>
-      Obstacle detection and navigation system using radar sensors
-      for autonomous movement in low-visibility environments.
-    </p>
-
-    <div class="tags">
-      <span>Radar</span>
-      <span>Navigation</span>
-      <span>Sensors</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-<div class="project-card">
-  <img src="images\projects\self balancing bot.png" alt="Self Balancing Bot">
-  <span class="status completed">Completed</span>
-
-  <div class="content">
-    <h3>Self Balancing Bot</h3>
-    <p>
-      Two-wheeled self-balancing robot implementing PID control
-      using IMU sensor feedback.
-    </p>
-
-    <div class="tags">
-      <span>PID</span>
-      <span>IMU</span>
-      <span>Control Systems</span>
-    </div>
-
-    <div class="links">
-      <a href="#">🐙 Code</a>
-      <a href="#">🔗 Details</a>
-    </div>
-  </div>
-</div>
-
-    </div>
-  </section>
-
+    <script src="/js/main.js"></script>
+   
 </body>
-
 </html>
