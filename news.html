@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News & Updates | Robotics Club NITP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css">  
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* CSS to hide elements */
+        .hide { display: none !important; }
+        
+        /* Optional: Visual feedback when search returns nothing */
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-style: italic;
+            display: none;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -33,17 +47,18 @@
     <div class="container news-layout">
         <aside class="news-sidebar">
             <div class="search-box">
-                <input type="text" placeholder="Search news...">
+                <input type="text" id="newsSearch" placeholder="Search news...">
             </div>
+
             <div class="filter-group">
                 <h4>Categories</h4>
-                <button class="filter-link active">All News</button>
-                <button class="filter-link">Club Updates</button>
-                <button class="filter-link">Competitions</button>
-                <button class="filter-link">Tech Innovations</button>
-                <button class="filter-link">Research Breakthroughs</button>
+                <button class="filter-link active" data-filter="all">All News</button>
+                <button class="filter-link" data-filter="club">Club Updates</button>
+                <button class="filter-link" data-filter="competitions">Competitions</button>
+                <button class="filter-link" data-filter="tech">Tech Innovations</button>
+                <button class="filter-link" data-filter="research">Research Breakthroughs</button>
             </div>
-            
+
             <div class="newsletter-box">
                 <h4>Join the Squad</h4>
                 <p>Get the latest bot-updates in your inbox.</p>
@@ -55,97 +70,95 @@
         </aside>
 
         <main class="news-feed">
+            <div id="noResultsMsg" class="no-results">No articles found matching your search.</div>
 
-            <!-- === CLUB NEWS (internal updates) === -->
             <h2 class="section-title">Club News</h2>
 
-            <article class="news-card">
+            <article class="news-card" data-category="competitions">
                 <div class="news-meta">
                     <span class="date">Dec 01, 2025</span>
-                    <span class="tag">Club Update</span>
+                    <span class="tag">Competition</span>
                 </div>
                 <h3>Idea Festival 2025 Triumph</h3>
                 <p>
-                    NITP Robotics Club congratulates **Adarsh Aarav** for winning 2nd Prize (among over 25,000 teams) at the Idea Festival 2025, organized by Startup Bihar. His VTOL-UAV concept impressed judges and was honoured by Union Minister Shri Piyush Goyal — marking a milestone in NIT Patna’s innovation culture and robotics outreach.
+                    NITP Robotics Club congratulates **Adarsh Aarav** for winning 2nd Prize (among over 25,000 teams) at the Idea Festival 2025, organized by Startup Bihar. His VTOL-UAV concept impressed judges and was honoured by Union Minister Shri Piyush Goyal — marking a milestone in NIT Patna’s innovation culture.
                     <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank" class="read-more">View Original Update</a>
                 </p>
             </article>
 
-            <article class="news-card">
+            <article class="news-card" data-category="club">
                 <div class="news-meta">
                     <span class="date">Oct 05, 2025</span>
                     <span class="tag">Club Update</span>
                 </div>
                 <h3>Autonomous Drone Project Completion</h3>
                 <p>
-                    The Robotics Club completed an ESP32-based autonomous drone prototype for the IRoC 2025 challenge, integrating advanced sensors, navigation algorithms, and edge computing for improved flight autonomy. This project boosted hands-on learning and demonstrated club’s commitment to cutting-edge robotics.
+                    The Robotics Club completed an ESP32-based autonomous drone prototype for the IRoC 2025 challenge, integrating advanced sensors, navigation algorithms, and edge computing for improved flight autonomy.
                     <a href="https://www.linkedin.com/company/robotics-club-nit-patna" target="_blank" class="read-more">See Full Project Info</a>
                 </p>
             </article>
 
-            <!-- === ROBOTICS INDUSTRY NEWS === -->
             <h2 class="section-title">Robotics Industry News</h2>
 
-            <article class="news-card">
+            <article class="news-card" data-category="tech">
                 <div class="news-meta">
                     <span class="date">Dec 20, 2025</span>
                     <span class="tag">Tech Insight</span>
                 </div>
                 <h3>Waymo Robotaxis Stall During SF Outage</h3>
                 <p>
-                    A widespread power outage in San Francisco led to Waymo robotaxis stalling at intersections, raising key questions about autonomous vehicles' crisis resilience. Traffic signal failures triggered system delays and highlighted gaps in teleoperation support, prompting calls for updated safety protocols and regulatory standards to ensure reliability in emergencies. California regulatory bodies are now investigating operational safeguards for autonomous fleets.
+                    A widespread power outage in San Francisco led to Waymo robotaxis stalling at intersections, raising key questions about autonomous vehicles' crisis resilience. Traffic signal failures triggered system delays and highlighted gaps in teleoperation support.
                     <a href="https://www.reuters.com/business/autos-transportation/waymos-san-francisco-outage-raises-doubts-over-robotaxi-readiness-during-crises-2025-12-27/" target="_blank" class="read-more">Read More</a>
                 </p>
-            </article> 
+            </article>
 
-            <article class="news-card">
+            <article class="news-card" data-category="tech">
                 <div class="news-meta">
                     <span class="date">Dec 22, 2025</span>
                     <span class="tag">Industry</span>
                 </div>
                 <h3>New Atlas Robots Debut at CES</h3>
                 <p>
-                    Hyundai’s Boston Dynamics is set to unveil a new generation of Atlas humanoid robots at the upcoming CES, showcasing advanced mobility and AI capabilities. The move reflects growing commercialization efforts by robotics leaders and highlights innovation in humanoid platforms for industrial and service applications.
+                    Hyundai’s Boston Dynamics is set to unveil a new generation of Atlas humanoid robots at the upcoming CES, showcasing advanced mobility and AI capabilities.
                     <a href="https://www.reuters.com/business/retail-consumer/hyundais-boston-dynamics-debut-new-atlas-humanoid-robots-ces-2025-12-22/" target="_blank" class="read-more">Read More</a>
                 </p>
-            </article> 
+            </article>
 
-            <article class="news-card">
+            <article class="news-card" data-category="tech">
                 <div class="news-meta">
                     <span class="date">Dec 15, 2025</span>
                     <span class="tag">Innovation</span>
                 </div>
                 <h3>Bio-Inspired Robotic Systems Launched</h3>
                 <p>
-                    Lumina Tech has introduced AI-enhanced biomimetic aerial robots – the Bionic Bird and Flying Fox – combining GPS, imaging, and environmental sensors for real-world tasks like monitoring and inspection. This development underscores how robotics merges biology and AI for practical solutions in diverse sectors.
+                    Lumina Tech has introduced AI-enhanced biomimetic aerial robots – the Bionic Bird and Flying Fox – combining GPS, imaging, and environmental sensors for real-world tasks.
                     <a href="https://timesofindia.indiatimes.com/entertainment/events/lumina-tech-launches-groundbreaking-ai-enhanced-bionic-bird-and-flying-fox/articleshow/125766954.cms" target="_blank" class="read-more">Read More</a>
                 </p>
-            </article> 
+            </article>
 
-            <article class="news-card">
+            <article class="news-card" data-category="research">
                 <div class="news-meta">
                     <span class="date">Dec 02, 2025</span>
-                    <span class="tag">Tech Insight</span>
+                    <span class="tag">Industry Analysis</span>
                 </div>
                 <h3>China Robotics Sector Faces Bubble Warning</h3>
                 <p>
-                    China’s authorities have cautioned about a potential investment bubble in the humanoid robotics industry, highlighting risks linked to rapid growth and speculative ventures lacking clear practical use. With over 150 firms operating in the space, regulatory oversight seeks balance between innovation and realistic deployment capabilities.
+                    China’s authorities have cautioned about a potential investment bubble in the humanoid robotics industry, highlighting risks linked to rapid growth and speculative ventures lacking clear practical use.
                     <a href="https://www.theverge.com/news/831451/china-humanoid-robotics-bubble" target="_blank" class="read-more">Read More</a>
                 </p>
             </article>
 
-            <article class="news-card">
+            <article class="news-card" data-category="research">
                 <div class="news-meta">
                     <span class="date">Mar 12, 2025</span>
                     <span class="tag">Research</span>
                 </div>
                 <h3>AI Models Drive Robotics Advances</h3>
                 <p>
-                    Google’s Gemini Robotics and Gemini Robotics-ER models aim to bring advanced AI reasoning and vision into physical robots, enabling adaptable behavior. These models, based on the Gemini 2.0 foundation, represent a key milestone in applying large language AI systems to real-world robotic platforms, potentially accelerating development across research and industry.
+                    Google’s Gemini Robotics and Gemini Robotics-ER models aim to bring advanced AI reasoning and vision into physical robots, enabling adaptable behavior.
                     <a href="https://en.wikipedia.org/wiki/Gemini_Robotics" target="_blank" class="read-more">Read More</a>
                 </p>
-            </article> 
-
+            </article>
         </main>
     </div>
 
@@ -153,6 +166,90 @@
         <p>&copy; 2025 Robotics Club NIT Patna</p>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-link');
+            const newsCards = document.querySelectorAll('.news-card');
+            const sectionTitles = document.querySelectorAll('.section-title');
+            const searchInput = document.getElementById('newsSearch');
+            const noResultsMsg = document.getElementById('noResultsMsg');
+
+            // --- FUNCTION 1: CATEGORY FILTERING ---
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Reset Search Input when clicking a category
+                    searchInput.value = '';
+
+                    // Active Class Logic
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    // Show/Hide Section Titles
+                    sectionTitles.forEach(title => {
+                        title.style.display = (filterValue === 'all') ? 'block' : 'none';
+                    });
+
+                    // Show/Hide Cards
+                    let hasVisibleCards = false;
+                    newsCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (filterValue === 'all' || filterValue === cardCategory) {
+                            card.classList.remove('hide');
+                            card.style.animation = 'none'; 
+                            card.offsetHeight; /* trigger reflow */
+                            card.style.animation = '';
+                            hasVisibleCards = true;
+                        } else {
+                            card.classList.add('hide');
+                        }
+                    });
+
+                    // Handle "No Results" message for empty categories
+                    noResultsMsg.style.display = hasVisibleCards ? 'none' : 'block';
+                });
+            });
+
+            // --- FUNCTION 2: SEARCH FILTERING ---
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+
+                // If searching, remove 'active' from category buttons to avoid confusion
+                if(searchTerm.length > 0) {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Hide section titles during search to keep list clean
+                    sectionTitles.forEach(title => title.style.display = 'none');
+                } else {
+                    // If search cleared, reset to "All News"
+                    filterButtons[0].classList.add('active'); 
+                    sectionTitles.forEach(title => title.style.display = 'block');
+                }
+
+                let hasMatches = false;
+
+                newsCards.forEach(card => {
+                    // Get text from title and paragraph
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const text = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || text.includes(searchTerm)) {
+                        card.classList.remove('hide');
+                        hasMatches = true;
+                    } else {
+                        card.classList.add('hide');
+                    }
+                });
+
+                // Show "No Results" message if search returns nothing
+                if (!hasMatches && searchTerm.length > 0) {
+                    noResultsMsg.style.display = 'block';
+                    noResultsMsg.textContent = `No articles found for "${e.target.value}"`;
+                } else {
+                    noResultsMsg.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
