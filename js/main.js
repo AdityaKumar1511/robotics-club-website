@@ -1,9 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Toggle (Simplified for now)
-    const navLinks = document.querySelector('.nav-links');
+    /*const navLinks = document.querySelector('.nav-links');
     const hamburger = document.createElement('div');
     hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-    hamburger.className = 'hamburger';
+    hamburger.className = 'hamburger';*/
+
+    const hamburger = document.querySelector('.hamburger'); // Selects the div from your HTML
+    const navLinks = document.querySelector('.nav-links');  // Selects your menu list
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', () => {
+            // Toggles the 'active' class on the menu
+            navLinks.classList.toggle('active');
+            
+            // Optional: Toggle an 'open' class on hamburger for animations
+            hamburger.classList.toggle('open');
+});
+    }
     
     // 2. Active Page Highlighter
     const currentPage = window.location.pathname.split("/").pop();

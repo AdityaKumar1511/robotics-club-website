@@ -67,6 +67,17 @@ nav {
     cursor: pointer;
     font-size: 1.5rem;
 }
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide by default on mobile */
+        flex-direction: column;
+        /* Add your mobile styling here (position: absolute, etc.) */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when JS toggles the class */
+    }
+}
 
 /* --- FOOTER --- */
 footer {
