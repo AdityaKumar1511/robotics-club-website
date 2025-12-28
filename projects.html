@@ -32,16 +32,23 @@
     </header>
 
     <section class="projects-section container">
-        <div class="filter-container">
-            <div class="filter-group">
-                <span>Category:</span>
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="drone">Drones</button>
-                <button class="filter-btn" data-filter="ai">AI/ML</button>
-                <button class="filter-btn" data-filter="iot">IoT</button>
-                <button class="filter-btn" data-filter="arm">Robotic Arm</button>
-            </div>
-        </div>
+        <!-- FILTER SECTION -->
+<div class="filters">
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="drone">Drones</option>
+        <option value="ai-ml">AI / ML</option>
+        <option value="iot">IoT</option>
+        <option value="robotic-arm">Robotic Arm</option>
+    </select>
+
+    <select id="yearFilter">
+        <option value="all">All Years</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="2022">2022</option>
+    </select>
+</div>
 
         <div class="grid" id="projectGrid">
             <div class="project-card" data-category="drone" data-year="2024">
@@ -77,6 +84,151 @@
                     </div>
                 </div>
             </div>
+            <!-- 1. Drone -->
+<div class="project-card" data-category="drone" data-year="2023">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1473968512647-3e447244af8f?auto=format&fit=crop&q=80&w=600" alt="Drone Project">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project2')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2023</span>
+        <h3>FPV Racing Drone</h3>
+        <p>A high-speed FPV drone built for racing with real-time video transmission.</p>
+        <div class="tech-stack">
+            <span>Betaflight</span> <span>ESP32</span> <span>C++</span>
+        </div>
+    </div>
+</div>
+
+<!-- 2. AI/ML -->
+<div class="project-card" data-category="ai-ml" data-year="2024">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=600" alt="AI Project">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project3')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2024</span>
+        <h3>Face Recognition System</h3>
+        <p>An AI-powered face recognition system for secure authentication.</p>
+        <div class="tech-stack">
+            <span>Python</span> <span>OpenCV</span> <span>TensorFlow</span>
+        </div>
+    </div>
+</div>
+
+<!-- 3. AI/ML -->
+<div class="project-card" data-category="ai-ml" data-year="2022">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=600" alt="ML Project">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project4')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2022</span>
+        <h3>Stock Price Predictor</h3>
+        <p>Machine learning model for predicting stock trends using historical data.</p>
+        <div class="tech-stack">
+            <span>Python</span> <span>Pandas</span> <span>Scikit-learn</span>
+        </div>
+    </div>
+</div>
+
+<!-- 4. IoT -->
+<div class="project-card" data-category="iot" data-year="2023">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=600&q=80" alt="Smart Home Automation">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project5')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2023</span>
+        <h3>Smart Home Automation</h3>
+        <p>IoT-based system to control lights and appliances remotely.</p>
+        <div class="tech-stack">
+            <span>ESP8266</span> <span>MQTT</span> <span>Node.js</span>
+        </div>
+    </div>
+</div>
+
+<!-- 5. IoT -->
+<div class="project-card" data-category="iot" data-year="2024">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=600&q=80" alt="Smart Agriculture System">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project6')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2024</span>
+        <h3>Smart Agriculture System</h3>
+        <p>Automated irrigation and monitoring system using IoT sensors.</p>
+        <div class="tech-stack">
+            <span>Arduino</span> <span>LoRa</span> <span>Firebase</span>
+        </div>
+    </div>
+</div>
+
+<!-- 6. Robotic Arm -->
+<div class="project-card" data-category="robotic-arm" data-year="2023">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80" alt="Pick and Place Robotic Arm">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project7')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2023</span>
+        <h3>Pick and Place Robotic Arm</h3>
+        <p>A 4-DOF robotic arm designed for automated object handling.</p>
+        <div class="tech-stack">
+            <span>Arduino</span> <span>Servo Motors</span> <span>C++</span>
+        </div>
+    </div>
+</div>
+
+<!-- 7. Robotic Arm -->
+<div class="project-card" data-category="robotic-arm" data-year="2024">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1581093588401-5a6c8a5c39e0?auto=format&fit=crop&w=600&q=80" 
+     alt="AI Controlled Robotic Arm">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project8')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2024</span>
+        <h3>AI Controlled Robotic Arm</h3>
+        <p>Robotic arm controlled using computer vision and AI algorithms.</p>
+        <div class="tech-stack">
+            <span>Python</span> <span>OpenCV</span> <span>ROS</span>
+        </div>
+    </div>
+</div>
+
+<!-- 8. Drone -->
+<div class="project-card" data-category="drone" data-year="2022">
+    <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=600" alt="Survey Drone">
+        <div class="card-overlay">
+            <button class="view-details" onclick="openModal('project9')">View Details</button>
+        </div>
+    </div>
+    <div class="card-content">
+        <span class="project-year">2022</span>
+        <h3>Aerial Survey Drone</h3>
+        <p>Drone designed for land mapping and aerial photography.</p>
+        <div class="tech-stack">
+            <span>PX4</span> <span>GPS</span> <span>QGroundControl</span>
+        </div>
+    </div>
+</div>
+
             </div>
     </section>
 
@@ -97,7 +249,7 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="js/modals.js"></script>
    
 </body>
 </html>

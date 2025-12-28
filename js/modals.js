@@ -28,3 +28,32 @@ document.addEventListener("DOMContentLoaded", () => {
   dateFilter.addEventListener("change", applyFilters);
 
 });
+
+const categoryFilter = document.getElementById("categoryFilter");
+const yearFilter = document.getElementById("yearFilter");
+const projectCards = document.querySelectorAll(".project-card");
+
+function filterProjects() {
+    const selectedCategory = categoryFilter.value;
+    const selectedYear = yearFilter.value;
+
+    projectCards.forEach(card => {
+        const cardCategory = card.getAttribute("data-category");
+        const cardYear = card.getAttribute("data-year");
+
+        const categoryMatch =
+            selectedCategory === "all" || selectedCategory === cardCategory;
+
+        const yearMatch =
+            selectedYear === "all" || selectedYear === cardYear;
+
+        if (categoryMatch && yearMatch) {
+            card.classList.remove("hide");
+        } else {
+            card.classList.add("hide");
+        }
+    });
+}
+
+categoryFilter.addEventListener("change", filterProjects);
+yearFilter.addEventListener("change", filterProjects);
