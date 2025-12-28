@@ -1133,3 +1133,70 @@ footer {
   font-size: 1rem;
   color: #92a9cf;
 }
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  padding: 50px 0;
+}
+
+/* Center vertical line */
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: cyan;
+  transform: translateX(-50%);
+}
+
+/* Achievement box common style */
+.timeline-item {
+  width: 45%;
+  padding: 15px 20px;
+  background: #101820;
+  border-radius: 8px;
+  margin: 20px 0;
+  position: relative;
+  color: white;
+}
+
+/* Odd = left */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+/* Even = right */
+.timeline-item:nth-child(even) {
+  left: 55%;
+}
+
+/* Dot circle */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: cyan;
+  border-radius: 50%;
+}
+
+/* Dot position */
+.timeline-item:nth-child(odd)::before {
+  right: -32px;
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -32px;
+}
+
+/* Year badge */
+.year {
+  background: #00bcd4;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
