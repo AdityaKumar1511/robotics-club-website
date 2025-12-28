@@ -34,8 +34,23 @@
     <div class="container">
         <section class="event-section">
             <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Upcoming Events</h2>
+              <!-- Filters -->
+  <section class="filters">
+    <select id="typeFilter">
+      <option value="all">All Types</option>
+      <option value="Workshop">Workshop</option>
+      <option value="Competition">Competition</option>
+    </select>
+
+    <select id="dateFilter">
+      <option value="all">All Dates</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+    </select>
+  </section>
+
             <div class="grid" id="upcomingGrid">
-                <div class="event-card">
+                <div class="event-card" data-type="Workshop" data-date="January">
                     <div class="event-badge">Workshop</div>
                     <div class="event-date">Jan 15, 2026</div>
                     <h3>Introduction to ROS 2</h3>
@@ -46,7 +61,7 @@
                     </div>
                     <a href="https://forms.gle/sample" class="register-btn">Register Interest</a>
                 </div>
-                <div class="event-card">
+                <div class="event-card" data-type="Workshop" data-date="January">
                     <div class="event-badge">Workshop</div>
                     <div class="event-date">Jan 20, 2026</div>
                     <h3>AI & Machine Learning Bootcamp</h3>
@@ -57,7 +72,7 @@
                     </div>
                     <a href="https://forms.gle/sample" class="register-btn">Register Interest</a>
                 </div>
-                <div class="event-card">
+                <div class="event-card" data-type="Competition" data-date="January">
                     <div class="event-badge">Competition</div>
                     <div class="event-date">Jan 25, 2026</div>
                     <h3>Line Follower Robot Competition</h3>
@@ -68,7 +83,7 @@
                     </div>
                     <a href="https://forms.gle/sample" class="register-btn">Register Interest</a>
                 </div>
-                <div class="event-card">
+                <div class="event-card" data-type="Competition" data-date="January">
                     <div class="event-badge">Competition</div>
                     <div class="event-date">Jan 30, 2026</div>
                     <h3>Hack the Circuit - IoT Hackathon</h3>
@@ -79,7 +94,7 @@
                     </div>
                     <a href="https://forms.gle/sample" class="register-btn">Register Interest</a>
                 </div>
-                <div class="event-card">
+                <div class="event-card" data-type="Workshop" data-date="February">
                     <div>
                     <div class="event-badge">Workshop</div>
                     <div class="event-date">Feb 05, 2026</div>
@@ -90,7 +105,7 @@
                     </div>
                     <a href="#" class="register-btn disabled">Opening Soon</a>
                 </div>
-                <div class="event-card">
+                <div class="event-card" data-type="Competition" data-date="February">
                     <div>
                     <div class="event-badge">Competition</div>
                     <div class="event-date">Feb 25, 2026</div>
@@ -150,6 +165,6 @@
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="js/modals.js"></script>
 </body>
 </html>
