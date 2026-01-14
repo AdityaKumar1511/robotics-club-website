@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "stubbleconnect",
+    "robo": "robotics-club-website-61dfe"
+  },
+  "targets": {},
+  "etags": {}
+}
